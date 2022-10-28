@@ -1,0 +1,47 @@
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from '../../node_modules/react-router-dom/dist/index';
+
+const Header = () => {
+  const Header = styled.header`
+    width: 1200px;
+    max-width: 100%;
+    padding: 20px 0;
+    margin: 50px auto 0 auto;
+    text-align: center;
+    background-color: white;
+  `;
+
+  const Ul = styled.ul`
+    width: 100%;
+
+    & li {
+      font-size: 2rem;
+      color: white;
+      display: inline-block;
+      padding: 0 20px;
+
+      & a {
+        font-weight: bold;
+      }
+    }
+  `;
+
+  return (
+    <Header>
+      <Ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/profile">Skills</Link>
+        </li>
+      </Ul>
+    </Header>
+  );
+};
+
+export default Header;
