@@ -16,6 +16,22 @@ const Home = () => {
     & span {
       color: black;
     }
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      font-size: 2.3rem;
+
+      &:last-child {
+        font-size: 2rem;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      font-size: 2rem;
+
+      &:last-child {
+        font-size: 1.7rem;
+      }
+    } ;
   `;
 
   return (

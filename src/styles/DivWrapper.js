@@ -10,4 +10,12 @@ export const DivWrapper = styled.div`
   background: white;
   border-top: 1px solid #a1a1a1;
   position: relative;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    padding: 50px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    padding: 20px;
+  } ;
 `;

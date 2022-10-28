@@ -24,6 +24,16 @@ const Header = () => {
       & a {
         font-weight: bold;
       }
+
+      @media screen and (min-width: 480px) and (max-width: 767px) {
+        font-size: 1.5rem;
+        padding: 0 15px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        font-size: 1.4rem;
+        padding: 0 15px;
+      }
     }
   `;
 

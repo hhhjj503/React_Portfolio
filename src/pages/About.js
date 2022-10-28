@@ -15,12 +15,26 @@ const About = () => {
       color: rgb(65, 191, 207);
       font-weight: bold;
     }
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      font-size: 1.3rem;
+    }
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      font-size: 1.2rem;
+    }
   `;
 
   const Div = styled.div`
     font-size: 1.4rem;
     line-height: 20px;
     letter-spacing: 1px;
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      font-size: 1.3rem;
+    }
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      font-size: 1.2rem;
+    }
   `;
 
   const Ul = styled.ul`
@@ -43,6 +57,16 @@ const About = () => {
         background-color: transparent;
         color: black;
       }
+
+      @media screen and (min-width: 480px) and (max-width: 767px) {
+        font-size: 1.2rem;
+      }
+      @media screen and (min-width: 320px) and (max-width: 479px) {
+        font-size: 1.1rem;
+      }
+    }
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      text-align: center;
     }
   `;
 
@@ -54,6 +78,24 @@ const About = () => {
     &.img {
       text-align: center;
     }
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      display: block;
+      width: 100%;
+
+      &:first-child {
+        margin-bottom: 50px;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      display: block;
+      width: 100%;
+
+      &:first-child {
+        margin-bottom: 30px;
+      }
+    } ;
   `;
 
   const Img = styled.div`
@@ -63,6 +105,15 @@ const About = () => {
     background-size: cover;
     background-position: center;
     margin: 0 auto;
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      width: 100%;
+      height: 300px;
+    } ;
   `;
 
   return (
