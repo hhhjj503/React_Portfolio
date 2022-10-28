@@ -20,7 +20,8 @@ const App = () => {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} exact={true} />
+          <Route path="/React_Portfolio" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/profile" element={<Skills />} />
         </Routes>

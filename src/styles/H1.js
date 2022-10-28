@@ -13,7 +13,7 @@ export const H1 = styled.h1`
     bottom: -25px;
     width: 50px;
     height: 3px;
-    background: blue;
+    background: rgb(65, 191, 207);
     border-radius: 10px;
   }
 
