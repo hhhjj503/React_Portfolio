@@ -41,13 +41,13 @@ const Header = () => {
     <Header>
       <Ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/React_Portfolio">Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/React_Portfolio/about">About</Link>
         </li>
         <li>
-          <Link to="/profile">Skills</Link>
+          <Link to="/React_Portfolio/skills">Skills</Link>
         </li>
       </Ul>
     </Header>

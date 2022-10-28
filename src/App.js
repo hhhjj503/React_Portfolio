@@ -22,8 +22,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} exact={true} />
           <Route path="/React_Portfolio" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/profile" element={<Skills />} />
+          <Route path="/React_Portfolio/about" element={<About />} />
+          <Route path="/React_Portfolio/skills" element={<Skills />} />
         </Routes>
       </main>
     </BrowserRouter>
