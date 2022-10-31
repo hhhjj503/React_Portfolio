@@ -72,6 +72,7 @@ const About = () => {
 
   const Half = styled.div`
     display: inline-block;
+    vertical-align: middle;
     position: relative;
     width: 50%;
 
@@ -116,12 +117,22 @@ const About = () => {
     } ;
   `;
 
+  const StyledDivWrapper = styled(DivWrapper)`
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      height: 100%;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      height: 100%;
+    } ;
+  `;
+
   return (
-    <DivWrapper>
+    <StyledDivWrapper>
       <Half className="img">
         <Img
           widthValue="70%"
-          heightValue="400px"
+          heightValue="500px"
           path={developerImg}
           className="abs"
         ></Img>
@@ -159,7 +170,7 @@ const About = () => {
           <li>JS</li>
         </Ul>
       </Half>
-    </DivWrapper>
+    </StyledDivWrapper>
   );
 };
 

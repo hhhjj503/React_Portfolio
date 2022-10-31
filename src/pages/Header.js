@@ -4,10 +4,8 @@ import { Link } from '../../node_modules/react-router-dom/dist/index';
 
 const Header = () => {
   const Header = styled.header`
-    width: 1200px;
-    max-width: 100%;
-    padding: 20px 0;
-    margin: 50px auto 0 auto;
+    width: 100%;
+    padding: 30px 0;
     text-align: center;
     background-color: white;
   `;
@@ -19,7 +17,7 @@ const Header = () => {
       font-size: 2rem;
       color: white;
       display: inline-block;
-      padding: 0 20px;
+      padding: 0 30px;
 
       & a {
         font-weight: bold;

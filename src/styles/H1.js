@@ -4,6 +4,7 @@ export const H1 = styled.h1`
   font-size: 3rem;
   margin-bottom: 50px;
   position: relative;
+  display: ${(props) => (props.hidden === true ? 'none' : 'block')};
 
   &:after {
     content: '';
