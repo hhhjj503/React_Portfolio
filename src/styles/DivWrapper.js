@@ -4,7 +4,8 @@ export const DivWrapper = styled.div`
   //width: ${(props) => props.widthValue};
   width: 100%;
   padding: 200px;
-  height: 100vh;
+  height: 100%;
+  min-height: calc(100vh - 80px);
   box-sizing: border-box;
   margin: 0 auto;
   background: white;
@@ -26,15 +27,13 @@ export const DivWrapper = styled.div`
 
   &.skills {
     height: 100%;
-    min-height: 900px;
+    min-height: calc(100vh - 80px);
 
     @media screen and (min-width: 480px) and (max-width: 767px) {
       height: 100vh;
-      min-height: initial;
     }
 
     @media screen and (min-width: 320px) and (max-width: 479px) {
-      min-height: initial;
     }
   }
 
