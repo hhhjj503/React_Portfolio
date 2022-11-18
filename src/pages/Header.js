@@ -8,6 +8,8 @@ const Header = () => {
     padding: 30px 0;
     text-align: center;
     background-color: white;
+    position: relative;
+    z-index: 2;
   `;
 
   const Ul = styled.ul`

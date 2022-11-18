@@ -70,16 +70,11 @@ const Skills = () => {
   const StyledDivWrapper = styled(DivWrapper)`
     padding: 0;
     box-sizing: border-box;
-    @media screen and (min-width: 480px) and (max-width: 767px) {
-    }
-
-    @media screen and (min-width: 320px) and (max-width: 479px) {
-    } ;
   `;
 
   return (
     <>
-      <StyledDivWrapper>
+      <StyledDivWrapper className="skills">
         <H1 hidden={true}>Skills</H1>
         <Ul>
           <Li background="rgb(236, 102, 48)">HTML</Li>

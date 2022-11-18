@@ -128,7 +128,7 @@ const About = () => {
   `;
 
   return (
-    <StyledDivWrapper>
+    <StyledDivWrapper className="about">
       <Half className="img">
         <Img
           widthValue="70%"
@@ -140,8 +140,7 @@ const About = () => {
       <Half>
         <H1>About</H1>
         <P>
-          <span>안녕하세요</span>, 끊임없이 노력하는 프론트엔드 개발자 허현재
-          입니다
+          <span>안녕하세요</span>, 끊임없이 노력하며 발전하는 허현재 입니다
           <br /> <br />
           고등학교부터 대학교육까지 디자인을 공부했으며 졸업 후 국비지원의{' '}
           <br />
