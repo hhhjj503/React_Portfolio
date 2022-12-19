@@ -26,11 +26,11 @@ export const DivWrapper = styled.div`
   }
 
   &.skills {
-    height: 100%;
-    min-height: calc(100vh - 80px);
+    height: auto;
+    min-height: initial;
 
     @media screen and (min-width: 480px) and (max-width: 767px) {
-      height: 100vh;
+      height: 70vh;
     }
 
     @media screen and (min-width: 320px) and (max-width: 479px) {
