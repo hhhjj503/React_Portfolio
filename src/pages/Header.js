@@ -49,6 +49,9 @@ const Header = () => {
         <li>
           <Link to="/React_Portfolio/skills">Skills</Link>
         </li>
+        <li>
+          <Link to="/React_Portfolio/portfolio">Portfolio</Link>
+        </li>
       </Ul>
     </Header>
   );

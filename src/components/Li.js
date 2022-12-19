@@ -29,7 +29,7 @@ const Li = ({ background, animation, score, onClick, children }) => {
     }
 
     &:hover {
-      //border-radius: 50%;
+      //border-radius: 15px;
       animation: ${() => (animation === '' ? '' : animation)} 3s infinite;
       span {
         font-size: 1.9rem;

@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Header from './pages/Header';
 import Skills from './pages/Skills';
+import Portfolio from './pages/Portfolio';
 import { createGlobalStyle } from 'styled-components';
 import reset from '../node_modules/styled-reset/lib/index';
 
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/React_Portfolio" element={<Home />} />
           <Route path="/React_Portfolio/about" element={<About />} />
           <Route path="/React_Portfolio/skills" element={<Skills />} />
+          <Route path="/React_Portfolio/portfolio" element={<Portfolio />} />
         </Routes>
       </main>
     </BrowserRouter>

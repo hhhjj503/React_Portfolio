@@ -46,7 +46,8 @@ const Skills = () => {
     font-weight: bold;
     padding: 50px;
     border-radius: 50%;
-    background-color: gray;
+    background-color: ${(props) =>
+      props.barColor === '' ? 'gray' : props.barColor};
     display: inline-block;
     color: white;
     margin: 0 auto;
@@ -168,7 +169,9 @@ const Skills = () => {
             width: '100%',
           }}
         >
-          <ScoreRound className="score">{score}</ScoreRound>
+          <ScoreRound className="score" barColor={barColor}>
+            {score}
+          </ScoreRound>
         </div>
         <GageBar barGage={barGage} barColor={barColor}></GageBar>
       </div>
