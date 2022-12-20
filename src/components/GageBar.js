@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const GageBar = ({ barGage, barColor }) => {
   const GageBarComponent = styled.div`
     width: 80%;
+    max-width: 1100px;
     height: 50px;
     background: none;
     margin: 50px auto 0 auto;
