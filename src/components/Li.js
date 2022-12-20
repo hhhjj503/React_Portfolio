@@ -17,6 +17,20 @@ const Li = ({ background, animation, score, onClick, children }) => {
     border-radius: 50%;
     transition: 0.3s ease-in-out;
     cursor: pointer;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s ease-in-out;
+    }
 
     & span {
       font-size: 1.8rem;
@@ -28,12 +42,40 @@ const Li = ({ background, animation, score, onClick, children }) => {
       transition: 0.3s ease-in-out;
     }
 
+    & svg {
+      width: 160px;
+      height: 160px;
+      fill: none;
+      stroke: white;
+      stroke-width: 10px;
+      //stroke-dasharray: 250;
+      stroke-linecap: round;
+      stroke-dashoffset: -100;
+      position: relative;
+      z-index: 1;
+      transition: 0.3s ease-in-out;
+      opacity: 0;
+      &.PC {
+        display: block;
+      }
+      &.tablet,
+      &.mobile {
+        display: none;
+      }
+    }
+
     &:hover {
       //border-radius: 15px;
-      animation: ${() => (animation === '' ? '' : animation)} 3s infinite;
+      //animation: ${() => (animation === '' ? '' : animation)} 3s infinite;
+
       span {
         font-size: 1.9rem;
         font-weight: bold;
+      }
+
+      svg {
+        opacity: 1;
+        animation: ${() => (animation === '' ? '' : animation)} 3s infinite;
       }
     }
 
@@ -44,8 +86,27 @@ const Li = ({ background, animation, score, onClick, children }) => {
       margin: 10px;
       line-height: 120px;
 
+      &:before {
+        width: 100px;
+        height: 100px;
+      }
+
       & span {
         font-size: 1.6rem;
+      }
+
+      & svg {
+        width: 120px;
+        height: 120px;
+
+        &.tablet {
+          display: block;
+          stroke-width: 7px;
+        }
+        &.pc,
+        &.mobile {
+          display: none;
+        }
       }
 
       &:hover {
@@ -62,8 +123,27 @@ const Li = ({ background, animation, score, onClick, children }) => {
       line-height: 80px;
       margin: 7px;
 
+      &:before {
+        width: 60px;
+        height: 60px;
+      }
+
       & span {
         font-size: 1.3rem;
+      }
+
+      & svg {
+        width: 80px;
+        height: 80px;
+
+        &.pc,
+        &.tablet {
+          display: none;
+        }
+        &.mobile {
+          display: block;
+          stroke-width: 4px;
+        }
       }
 
       &:hover {
@@ -78,6 +158,15 @@ const Li = ({ background, animation, score, onClick, children }) => {
   return (
     <LiComponent onClick={() => onClick(background, score)}>
       <span>{children}</span>
+      <svg className="pc">
+        <circle cx="80" cy="80" r="60" />
+      </svg>
+      <svg className="tablet">
+        <circle cx="60" cy="60" r="50" />
+      </svg>
+      <svg className="mobile">
+        <circle cx="40" cy="40" r="30" />
+      </svg>
     </LiComponent>
   );
 };
@@ -86,7 +175,11 @@ export default React.memo(Li);
 
 export const rhombus = keyframes`
   0% {
+    stroke-dasharray: 100;
     
   } 50% {
     transform : rotate(360deg);
+    stroke-dasharray: 250;
+  } 100% {
+    stroke-dasharray: 100;
   }`;
