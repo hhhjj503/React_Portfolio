@@ -7,6 +7,20 @@ import { useCallback } from 'react';
 import GageBar from '../components/GageBar';
 
 const Skills = () => {
+  const Wrapper = styled.div`
+    height: 100%;
+    background: white;
+    min-height: calc(100vh - 80px);
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      min-height: calc(100vh - 75px);
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      min-height: calc(100vh - 74px);
+    }
+  `;
+
   const Ul = styled.ul`
     width: 70%;
     margin: 10vh auto 0 auto;
@@ -78,13 +92,7 @@ const Skills = () => {
   );
 
   return (
-    <div
-      style={{
-        height: '100%',
-        background: 'white',
-        minHeight: 'calc(100vh - 100px)',
-      }}
-    >
+    <Wrapper>
       <StyledDivWrapper className="skills">
         <H1 hidden={true}>Skills</H1>
         <Ul>
@@ -161,7 +169,7 @@ const Skills = () => {
           textAlign: 'center',
           paddingBottom: '20px',
         }}
-        className="wrapper"
+        className="score-wrapper"
       >
         <div
           className="deco"
@@ -175,7 +183,7 @@ const Skills = () => {
         </div>
         <GageBar barGage={barGage} barColor={barColor}></GageBar>
       </div>
-    </div>
+    </Wrapper>
   );
 };
 

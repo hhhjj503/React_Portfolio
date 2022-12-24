@@ -30,10 +30,11 @@ export const DivWrapper = styled.div`
     min-height: initial;
 
     @media screen and (min-width: 480px) and (max-width: 767px) {
-      height: 70vh;
+      height: 50vh;
     }
 
     @media screen and (min-width: 320px) and (max-width: 479px) {
+      height: 100%;
     }
   }
 
