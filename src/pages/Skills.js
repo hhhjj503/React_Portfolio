@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { DivWrapper } from '../styles/DivWrapper';
 import { H1 } from '../styles/H1';
 import styled, { keyframes } from 'styled-components';
@@ -87,7 +87,7 @@ const Skills = () => {
     setScore(score);
     //setbarGage(score);
     setbarColor(background);
-  });
+  }, []);
 
   return (
     <Wrapper>

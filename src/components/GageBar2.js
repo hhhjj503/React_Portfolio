@@ -1,12 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useCallback } from 'react';
 import styled from 'styled-components';
 import DecoBar from './DecoBar';
 
 const size = 350;
-const rotateDeg = [];
-const result = [];
-
 const GageBar2 = ({ barColor, score }) => {
   const GageBarComponent = styled.div`
     width: ${size}px;
@@ -39,6 +36,9 @@ const GageBar2 = ({ barColor, score }) => {
 };
 
 const BiggerRound = ({ barColor, score }) => {
+  const [result, setResult] = useState([]);
+  //const [rotateDeg, setRotateDeg] = useState([]);
+
   const changedSize = size * 0.8;
   const Round = styled.div`
     width: ${changedSize}px;
@@ -61,6 +61,26 @@ const BiggerRound = ({ barColor, score }) => {
       height: ${changedSize * 0.4}px;
     }
   `;
+
+  const makeBar = (size, minRotate, score) => {
+    //size = 350
+    const tempResult = [];
+    const tempRotateDeg = [];
+    let decoBarCount = (score / size) * 100 * 2;
+    decoBarCount = parseInt(decoBarCount);
+    for (let i = 0; i < decoBarCount; i++) {
+      tempRotateDeg.push(minRotate);
+      minRotate += 6.5;
+    }
+
+    tempRotateDeg.map((num, i) =>
+      tempResult.push(
+        <DecoBar key={i} size={size} rotateValue={num}></DecoBar>,
+      ),
+    );
+
+    return tempResult;
+  };
 
   return (
     <Round>
@@ -101,24 +121,6 @@ const SmallRound = ({ barColor, score }) => {
     }
   `;
   return <Round>{score}</Round>;
-};
-
-const makeBar = (size, minRotate, score) => {
-  //size = 350
-  let decoBarCount = (score / size) * 100 * 2;
-  decoBarCount = parseInt(decoBarCount);
-  for (let i = 0; i < decoBarCount; i++) {
-    rotateDeg.push(minRotate);
-    minRotate += 6.5;
-  }
-
-  for (let i = 0; i < rotateDeg.length; i++) {
-    result.push(
-      <DecoBar key={i} size={size} rotateValue={rotateDeg[i]}></DecoBar>,
-    );
-  }
-
-  return result;
 };
 
 export default React.memo(GageBar2);
