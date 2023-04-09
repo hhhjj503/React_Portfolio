@@ -16,7 +16,7 @@ const About = () => {
       font-weight: bold;
     }
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
       font-size: 1.3rem;
     }
     @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -29,7 +29,7 @@ const About = () => {
     line-height: 20px;
     letter-spacing: 1px;
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
       font-size: 1.3rem;
     }
     @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -58,7 +58,7 @@ const About = () => {
         color: black;
       }
 
-      @media screen and (min-width: 480px) and (max-width: 767px) {
+      @media screen and (min-width: 480px) and (max-width: 768px) {
         font-size: 1.2rem;
       }
       @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -80,7 +80,7 @@ const About = () => {
       text-align: center;
     }
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
       display: block;
       width: 100%;
 
@@ -107,7 +107,7 @@ const About = () => {
     background-position: center;
     margin: 0 auto;
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
       width: 100%;
     }
 
@@ -118,7 +118,7 @@ const About = () => {
   `;
 
   const StyledDivWrapper = styled(DivWrapper)`
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
       height: 100%;
     }
 

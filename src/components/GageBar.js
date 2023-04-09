@@ -22,17 +22,17 @@ const GageBar = ({ barGage, barColor }) => {
       position: absolute;
       top: 0;
       left: 0;
-      width: ${() => (barGage === '' ? 1 : barGage)}%;
-      background-color: ${() => (barColor === '' ? 'gray' : barColor)};
+      width: 0%;
+      background-color: white;
+      animation: bar-gage 1s forwards ease-in-out;
       height: 50px;
     }
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
       height: 40px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 479px) {
-      height: 30px;
     }
   `;
   return <GageBarComponent></GageBarComponent>;

@@ -16,7 +16,7 @@ export const DivWrapper = styled.div`
   &.about {
     padding: 150px;
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
       padding: 50px;
     }
 
@@ -29,8 +29,8 @@ export const DivWrapper = styled.div`
     height: auto;
     min-height: initial;
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
-      height: 50vh;
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+      height: 100%;
     }
 
     @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -38,7 +38,7 @@ export const DivWrapper = styled.div`
     }
   }
 
-  @media screen and (min-width: 480px) and (max-width: 767px) {
+  @media screen and (min-width: 480px) and (max-width: 768px) {
     padding: 50px;
   }
 

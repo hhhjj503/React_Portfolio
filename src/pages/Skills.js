@@ -5,6 +5,7 @@ import styled, { keyframes } from 'styled-components';
 import Li, { rhombus } from '../components/Li';
 import { useCallback } from 'react';
 import GageBar from '../components/GageBar';
+import GageBar2 from '../components/GageBar2';
 
 const Skills = () => {
   const Wrapper = styled.div`
@@ -12,7 +13,7 @@ const Skills = () => {
     background: white;
     min-height: calc(100vh - 80px);
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
       min-height: calc(100vh - 75px);
     }
 
@@ -30,7 +31,7 @@ const Skills = () => {
     left: 0;
     text-align: center;
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
       width: 90%;
       margin: 5vh auto 0 auto;
       height: 100%;
@@ -47,7 +48,7 @@ const Skills = () => {
     padding: 0;
     box-sizing: border-box;
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
     }
 
     @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -67,7 +68,7 @@ const Skills = () => {
     margin: 0 auto;
     transition: 0.3s ease-in-out;
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
       padding: 40px;
       font-size: 1.6rem;
     }
@@ -79,17 +80,14 @@ const Skills = () => {
   `;
 
   const [score, setScore] = useState(0);
-  const [barGage, setbarGage] = useState(0);
+  //const [barGage, setbarGage] = useState(0);
   const [barColor, setbarColor] = useState('');
 
-  const changeScore = useCallback(
-    (background, score) => {
-      setScore(score);
-      setbarGage(score);
-      setbarColor(background);
-    },
-    [score],
-  );
+  const changeScore = useCallback((background, score) => {
+    setScore(score);
+    //setbarGage(score);
+    setbarColor(background);
+  });
 
   return (
     <Wrapper>
@@ -177,11 +175,12 @@ const Skills = () => {
             width: '100%',
           }}
         >
-          <ScoreRound className="score" barColor={barColor}>
+          {/* <ScoreRound className="score" barColor={barColor}>
             {score}
-          </ScoreRound>
+          </ScoreRound> */}
         </div>
-        <GageBar barGage={barGage} barColor={barColor}></GageBar>
+        {/* <GageBar barGage={barGage} barColor={barColor}></GageBar> */}
+        <GageBar2 barColor={barColor} score={score}></GageBar2>
       </div>
     </Wrapper>
   );
