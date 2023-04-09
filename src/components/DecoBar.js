@@ -43,4 +43,4 @@ const rotating = (rotateValue) => {
   return rotate;
 };
 
-export default DecoBar;
+export default React.memo(DecoBar);

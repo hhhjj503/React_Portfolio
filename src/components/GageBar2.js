@@ -121,4 +121,4 @@ const makeBar = (size, minRotate, score) => {
   return result;
 };
 
-export default GageBar2;
+export default React.memo(GageBar2);
