@@ -92,8 +92,9 @@ const Header = () => {
    * @param {String} color : String;
    * 팔레트 컴포넌트의 display 속성 변경
    */
-  function changeActive(value) {
-    setActive(value);
+  function changeActive() {
+    if (active === 'none') setActive('block');
+    else setActive('none');
   }
 
   return (
@@ -113,7 +114,7 @@ const Header = () => {
             <Link to="/React_Portfolio/portfolio">Portfolio</Link>
           </li>
         </Ul>
-        <Config onClick={() => changeActive('block')}>
+        <Config onClick={() => changeActive()}>
           <img src={gear} alt="gear" />
         </Config>
         <Palette onClick={changeColor} active={active}></Palette>
@@ -138,7 +139,7 @@ const Config = styled.div`
 
   @media screen and (min-width: 320px) and (max-width: 479px) {
     width: 15px;
-    right: 10px;
+    right: 20px;
   }
 `;
 
@@ -156,7 +157,7 @@ const Palette = (props) => {
     display: ${props.active};
 
     @media screen and (min-width: 320px) and (max-width: 479px) {
-      right: 10px;
+      right: 20px;
     }
   `;
 
