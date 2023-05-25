@@ -94,68 +94,28 @@ const Skills = () => {
       <StyledDivWrapper className="skills">
         <H1 hidden={true}>Skills</H1>
         <Ul>
-          <Li
-            background="rgb(236, 102, 48)"
-            animation={rhombus}
-            score={80}
-            onClick={changeScore}
-          >
+          <Li background="rgb(236, 102, 48)" score={80} onClick={changeScore}>
             {'HTML'}
           </Li>
-          <Li
-            background="rgb(0, 150, 230)"
-            animation={rhombus}
-            score={80}
-            onClick={changeScore}
-          >
+          <Li background="rgb(0, 150, 230)" score={80} onClick={changeScore}>
             {'CSS'}
           </Li>
-          <Li
-            background="rgb(238, 175, 75)"
-            animation={rhombus}
-            score={80}
-            onClick={changeScore}
-          >
+          <Li background="rgb(238, 175, 75)" score={80} onClick={changeScore}>
             {'JAVASCRIPT'}
           </Li>
-          <Li
-            background="rgb(6, 105, 173)"
-            animation={rhombus}
-            score={50}
-            onClick={changeScore}
-          >
+          <Li background="rgb(6, 105, 173)" score={50} onClick={changeScore}>
             {'jQuery'}
           </Li>
-          <Li
-            background="rgb(205, 103, 153)"
-            animation={rhombus}
-            score={50}
-            onClick={changeScore}
-          >
+          <Li background="rgb(205, 103, 153)" score={50} onClick={changeScore}>
             {'Sass'}
           </Li>
-          <Li
-            background="#50a8c0"
-            animation={rhombus}
-            score={50}
-            onClick={changeScore}
-          >
+          <Li background="#50a8c0" score={50} onClick={changeScore}>
             {'React'}
           </Li>
-          <Li
-            background="rgb(0, 0, 0)"
-            animation={rhombus}
-            score={50}
-            onClick={changeScore}
-          >
+          <Li background="rgb(0, 0, 0)" score={50} onClick={changeScore}>
             {'SQL'}
           </Li>
-          <Li
-            background="rgb(219, 56, 14)"
-            animation={rhombus}
-            score={50}
-            onClick={changeScore}
-          >
+          <Li background="rgb(219, 56, 14)" score={50} onClick={changeScore}>
             {'JAVA'}
           </Li>
         </Ul>

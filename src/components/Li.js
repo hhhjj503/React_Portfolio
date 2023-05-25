@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const Li = ({ background, animation, score, onClick, children }) => {
@@ -14,7 +14,10 @@ const Li = ({ background, animation, score, onClick, children }) => {
     `;
   };
 
-  const LiComponent = styled.li`
+  const [liBackground, setLiBackground] = useState(background);
+  const [liScore, setLiBackgroundScore] = useState(score);
+
+  const Li = styled.li`
     color: white;
     position: relative;
     display: inline-block;
@@ -24,16 +27,16 @@ const Li = ({ background, animation, score, onClick, children }) => {
     height: 150px;
     line-height: 150px;
     box-sizing: border-box;
-    background-color: ${() => (background === '' ? '#626262' : background)};
+    background-color: ${() => (liBackground === '' ? '#626262' : liBackground)};
     //border-radius: 10px;
     border-radius: 50%;
     transition: 0.3s ease-in-out;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    top: 30px;
-    opacity: 0;
-    animation: ${showElements} 0.5s forwards ease;
+    //top: 30px;
+    //opacity: 0;
+    //animation: ${showElements} 0.5s forwards ease;
 
     &:nth-child(2) {
       animation-delay: 0.1s;
@@ -117,7 +120,7 @@ const Li = ({ background, animation, score, onClick, children }) => {
 
       svg {
         opacity: 1;
-        animation: ${() => (animation === '' ? '' : animation)} 3s infinite;
+        animation: ${rhombus} 3s infinite;
       }
     }
 
@@ -198,7 +201,7 @@ const Li = ({ background, animation, score, onClick, children }) => {
   `;
 
   return (
-    <LiComponent onClick={() => onClick(background, score)}>
+    <Li onClick={() => onClick(liBackground, liScore)}>
       <span>{children}</span>
       <svg className="pc">
         <circle cx="75" cy="75" r="60" />
@@ -209,7 +212,7 @@ const Li = ({ background, animation, score, onClick, children }) => {
       <svg className="mobile">
         <circle cx="40" cy="40" r="30" />
       </svg>
-    </LiComponent>
+    </Li>
   );
 };
 
