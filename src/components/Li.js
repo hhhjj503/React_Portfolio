@@ -2,15 +2,27 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const Li = ({ background, animation, score, onClick, children }) => {
+  const showElements = () => {
+    return keyframes`
+      0% {
+
+      }
+      100% {
+        top:0;
+        opacity:1
+      }
+    `;
+  };
+
   const LiComponent = styled.li`
     color: white;
     position: relative;
     display: inline-block;
     margin: 30px 0;
     text-align: center;
-    width: 160px;
-    height: 160px;
-    line-height: 160px;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
     box-sizing: border-box;
     background-color: ${() => (background === '' ? '#626262' : background)};
     //border-radius: 10px;
@@ -18,6 +30,36 @@ const Li = ({ background, animation, score, onClick, children }) => {
     transition: 0.3s ease-in-out;
     cursor: pointer;
     position: relative;
+    overflow: hidden;
+    top: 30px;
+    opacity: 0;
+    animation: ${showElements} 0.5s forwards ease;
+
+    &:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+    &:nth-child(6) {
+      animation-delay: 0.5s;
+    }
+    &:nth-child(7) {
+      animation-delay: 0.6s;
+    }
+    &:nth-child(8) {
+      animation-delay: 0.7s;
+    }
+
+    &:hover {
+      border-radius: 10px;
+    }
 
     &:before {
       content: '';
@@ -43,11 +85,11 @@ const Li = ({ background, animation, score, onClick, children }) => {
     }
 
     & svg {
-      width: 160px;
-      height: 160px;
+      width: 150px;
+      height: 150px;
       fill: none;
       stroke: white;
-      stroke-width: 10px;
+      stroke-width: 5px;
       //stroke-dasharray: 250;
       stroke-linecap: round;
       stroke-dashoffset: -100;
@@ -159,7 +201,7 @@ const Li = ({ background, animation, score, onClick, children }) => {
     <LiComponent onClick={() => onClick(background, score)}>
       <span>{children}</span>
       <svg className="pc">
-        <circle cx="80" cy="80" r="60" />
+        <circle cx="75" cy="75" r="60" />
       </svg>
       <svg className="tablet">
         <circle cx="60" cy="60" r="50" />

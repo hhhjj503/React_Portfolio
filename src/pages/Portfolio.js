@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { DivWrapper } from '../styles/DivWrapper';
 import { Link } from '../../node_modules/react-router-dom/dist/index';
 
@@ -8,7 +8,7 @@ const Portfolio = () => {
     padding: 100px;
     text-align: center;
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
       padding: 50px;
     }
 
@@ -16,6 +16,18 @@ const Portfolio = () => {
       padding: 0;
     }
   `;
+
+  const showElements = () => {
+    return keyframes`
+      0% {
+
+      }
+      100% {
+        top:0;
+        opacity:1
+      }
+    `;
+  };
 
   const ABlockComponent = styled.a`
     display: inline-block;
@@ -26,6 +38,19 @@ const Portfolio = () => {
     background-size: cover;
     background-position: center center;
     position: relative;
+    top: 30px;
+    opacity: 0;
+    animation: ${showElements} 0.5s forwards ease;
+
+    &:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.5s;
+    }
 
     &:after {
       content: '';
@@ -47,15 +72,15 @@ const Portfolio = () => {
       }
     }
 
-    @media screen and (min-width: 480px) and (max-width: 767px) {
-      width: 250px;
-      height: 250px;
-      margin: 7px;
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+      width: 270px;
+      height: 270px;
+      margin: 10px;
     }
 
     @media screen and (min-width: 320px) and (max-width: 479px) {
       width: 100%;
-      height: 200px;
+      height: 250px;
       margin: 5px 0;
     }
   `;

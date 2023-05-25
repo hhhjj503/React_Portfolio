@@ -115,7 +115,7 @@ const Header = () => {
           </li>
         </Ul>
         <Config onClick={() => changeActive()}>
-          <img src={gear} alt="gear" />
+          <img src={gear} alt="톱니바퀴 아이콘 이미지" />
         </Config>
         <Palette onClick={changeColor} active={active}></Palette>
       </Header>
