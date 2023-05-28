@@ -33,7 +33,7 @@ const Portfolio = () => {
     display: inline-block;
     width: 300px;
     height: 300px;
-    margin: 0 10px;
+    margin: 10px;
     background-image: ${(props) => `url(${props.path})`};
     background-size: cover;
     background-position: center center;
@@ -50,6 +50,9 @@ const Portfolio = () => {
     }
     &:nth-child(4) {
       animation-delay: 0.5s;
+    }
+    &:nth-child(5) {
+      animation-delay: 0.7s;
     }
 
     &:after {
@@ -82,6 +85,10 @@ const Portfolio = () => {
       width: 100%;
       height: 250px;
       margin: 5px 0;
+
+      &:nth-child(1) {
+        margin-top: 0;
+      }
     }
   `;
   return (
@@ -104,6 +111,11 @@ const Portfolio = () => {
       <ABlockComponent
         path="./greennature.png"
         href="https://hhhjj503.github.io/PORTFOLIO/pages/greennature/index.html"
+        target="_blank"
+      ></ABlockComponent>
+      <ABlockComponent
+        path="./dagachi.png"
+        href="https://github.com/hhhjj503/spring_project_DAGACHI"
         target="_blank"
       ></ABlockComponent>
     </StyledDivWrapper>

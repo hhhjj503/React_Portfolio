@@ -60,10 +60,6 @@ const Li = ({ background, animation, score, onClick, children }) => {
       animation-delay: 0.7s;
     }
 
-    &:hover {
-      border-radius: 10px;
-    }
-
     &:before {
       content: '';
       width: 120px;
@@ -75,6 +71,11 @@ const Li = ({ background, animation, score, onClick, children }) => {
       left: 50%;
       transform: translate(-50%, -50%);
       transition: 0.3s ease-in-out;
+    }
+
+    &:hover:before {
+      width: 105px;
+      height: 105px;
     }
 
     & span {
@@ -136,6 +137,11 @@ const Li = ({ background, animation, score, onClick, children }) => {
         height: 100px;
       }
 
+      &:hover:before {
+        width: 85px;
+        height: 85px;
+      }
+
       & span {
         font-size: 1.6rem;
       }
@@ -171,6 +177,11 @@ const Li = ({ background, animation, score, onClick, children }) => {
       &:before {
         width: 60px;
         height: 60px;
+      }
+
+      &:hover:before {
+        width: 50px;
+        height: 50px;
       }
 
       & span {

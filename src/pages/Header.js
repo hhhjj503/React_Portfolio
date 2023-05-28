@@ -26,6 +26,7 @@ const Header = () => {
     background-color: white;
     z-index: 2;
     animation: ${colorKeyframes(color)} 0.5s forwards ease-in-out;
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
   `;
 
   const Ul = styled.ul`
