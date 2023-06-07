@@ -22,6 +22,7 @@ const Header = () => {
   const Header = styled.header`
     width: 100%;
     padding: 30px 0;
+    white-space: nowrap;
     position: relative;
     background-color: white;
     z-index: 2;
@@ -66,12 +67,12 @@ const Header = () => {
         color: inherit;
       }
 
-      @media screen and (min-width: 480px) and (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         font-size: 1.5rem;
         padding: 0 15px;
       }
 
-      @media screen and (min-width: 320px) and (max-width: 479px) {
+      @media screen and (max-width: 500px) {
         font-size: 1.4rem;
         padding: 0 15px;
       }
@@ -135,10 +136,10 @@ const Config = styled.div`
     cursor: pointer;
   }
 
-  @media screen and (min-width: 480px) and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
   }
 
-  @media screen and (min-width: 320px) and (max-width: 479px) {
+  @media screen and (max-width: 500px) {
     width: 15px;
     right: 20px;
   }
@@ -157,7 +158,7 @@ const Palette = (props) => {
     border: 1px solid #666;
     display: ${props.active};
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       right: 20px;
     }
   `;

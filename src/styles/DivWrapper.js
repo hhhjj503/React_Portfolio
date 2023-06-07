@@ -16,11 +16,11 @@ export const DivWrapper = styled.div`
   &.about {
     padding: 150px;
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       padding: 50px;
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       padding: 20px;
     }
   }
@@ -29,20 +29,20 @@ export const DivWrapper = styled.div`
     height: auto;
     min-height: initial;
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       height: 100%;
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       height: 100%;
     }
   }
 
-  @media screen and (min-width: 480px) and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     padding: 50px;
   }
 
-  @media screen and (min-width: 320px) and (max-width: 479px) {
+  @media screen and (max-width: 500px) {
     padding: 20px;
   }
 `;

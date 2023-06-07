@@ -8,11 +8,11 @@ const Portfolio = () => {
     padding: 100px;
     text-align: center;
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (min-width: 480px) and (max-width: 1024px) {
       padding: 50px;
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       padding: 0;
     }
   `;
@@ -75,13 +75,13 @@ const Portfolio = () => {
       }
     }
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       width: 270px;
       height: 270px;
       margin: 10px;
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       width: 100%;
       height: 250px;
       margin: 5px 0;

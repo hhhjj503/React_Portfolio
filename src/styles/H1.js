@@ -18,7 +18,7 @@ export const H1 = styled.h1`
     border-radius: 10px;
   }
 
-  @media screen and (min-width: 480px) and (max-width: 767px) {
+  @media screen and (max-width: 1024px) {
     font-size: 2rem;
 
     &:after {
@@ -28,7 +28,7 @@ export const H1 = styled.h1`
     }
   }
 
-  @media screen and (min-width: 320px) and (max-width: 479px) {
+  @media screen and (max-width: 500px) {
     font-size: 1.5rem;
     text-align: center;
     margin: 20px 0 30px 0;
@@ -40,5 +40,5 @@ export const H1 = styled.h1`
       height: 1px;
       width: 30px;
     }
-  } ;
+  }
 `;

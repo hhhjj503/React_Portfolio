@@ -15,12 +15,12 @@ const GageBar2 = ({ barColor, score }) => {
     margin: 0 auto;
     transition: 0.3s ease-in-out;
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       width: ${size - 50}px;
       height: ${size - 50}px;
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       width: ${size - 100}px;
       height: ${size - 100}px;
     }
@@ -51,12 +51,12 @@ const BiggerRound = ({ barColor, score }) => {
     background-color: transparent;
     z-index: 1;
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       width: ${changedSize * 0.7}px;
       height: ${changedSize * 0.7}px;
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       width: ${changedSize * 0.4}px;
       height: ${changedSize * 0.4}px;
     }
@@ -106,14 +106,14 @@ const SmallRound = ({ barColor, score }) => {
     background-color: ${barColor};
     z-index: 3;
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       width: ${changedSize * 0.7}px;
       height: ${changedSize * 0.7}px;
       line-height: ${changedSize * 0.7}px;
       font-size: 30px;
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       width: ${changedSize * 0.4}px;
       height: ${changedSize * 0.4}px;
       line-height: ${changedSize * 0.4}px;

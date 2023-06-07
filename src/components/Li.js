@@ -125,7 +125,7 @@ const Li = ({ background, animation, score, onClick, children }) => {
       }
     }
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       font-size: 1.7rem;
       width: 120px;
       height: 120px;
@@ -168,7 +168,7 @@ const Li = ({ background, animation, score, onClick, children }) => {
       }
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       width: 80px;
       height: 80px;
       line-height: 80px;

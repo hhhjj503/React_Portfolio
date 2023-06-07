@@ -29,7 +29,7 @@ const Home = () => {
       font-size: 2.7rem;
     }
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen  and (max-width: 768px) {
       line-height: 30px;
       font-size: 3rem;
 
@@ -38,7 +38,7 @@ const Home = () => {
       }
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen  and (max-width: 500px) {
       line-height: 20px;
       font-size: 2rem;
 
@@ -97,7 +97,7 @@ const Home = () => {
       }
     }
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       animation: ${(props) =>
         props.update === true ? changeShape('350px') : ''};
       animation-duration: 0.5s;
@@ -105,7 +105,7 @@ const Home = () => {
       animation-timing-function: ease;
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       animation: ${(props) =>
         props.update === true ? changeShape('250px') : ''};
       animation-duration: 0.5s;
@@ -124,11 +124,11 @@ const Home = () => {
     transform: translate(-50%, -50%);
     transition: 0.3s ease-in-out;
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       font-size: 3rem;
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       font-size: 2rem;
     }
   `;

@@ -13,11 +13,11 @@ const Skills = () => {
     background: white;
     min-height: calc(100vh - 80px);
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       min-height: calc(100vh - 75px);
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       min-height: calc(100vh - 74px);
     }
   `;
@@ -31,13 +31,13 @@ const Skills = () => {
     left: 0;
     text-align: center;
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       width: 90%;
       margin: 5vh auto 0 auto;
       height: 100%;
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       width: auto;
       margin: 0;
     }
@@ -48,10 +48,10 @@ const Skills = () => {
     padding: 0;
     box-sizing: border-box;
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       padding-top: 50px;
     }
   `;
@@ -68,12 +68,12 @@ const Skills = () => {
     margin: 0 auto;
     transition: 0.3s ease-in-out;
 
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       padding: 40px;
       font-size: 1.6rem;
     }
 
-    @media screen and (min-width: 320px) and (max-width: 479px) {
+    @media screen and (max-width: 500px) {
       padding: 30px;
       font-size: 1.4rem;
     }
