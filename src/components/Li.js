@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-const Li = ({ background, animation, score, onClick, children }) => {
+const Li = ({ background, animation, score, onClick, onKeyDown, children }) => {
   const showElements = () => {
     return keyframes`
       0% {
@@ -110,7 +110,8 @@ const Li = ({ background, animation, score, onClick, children }) => {
       }
     }
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       //border-radius: 15px;
       //animation: ${() => (animation === '' ? '' : animation)} 3s infinite;
 
@@ -212,7 +213,14 @@ const Li = ({ background, animation, score, onClick, children }) => {
   `;
 
   return (
-    <Li onClick={() => onClick(liBackground, liScore)}>
+    <Li
+      onClick={() => onClick(liBackground, liScore)}
+      tabIndex={0}
+      role="button"
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') onKeyDown(liBackground, liScore);
+      }}
+    >
       <span>{children}</span>
       <svg className="pc">
         <circle cx="75" cy="75" r="60" />

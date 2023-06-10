@@ -20,6 +20,7 @@ const Home = () => {
     transform: translate(-50%, -50%);
     transition: 0.3s ease-in-out;
     width: 100%;
+    line-height:1.618;
 
     & span {
       color: black;
@@ -30,7 +31,6 @@ const Home = () => {
     }
 
     @media screen  and (max-width: 768px) {
-      line-height: 30px;
       font-size: 3rem;
 
       & .sub {
@@ -39,7 +39,6 @@ const Home = () => {
     }
 
     @media screen  and (max-width: 500px) {
-      line-height: 20px;
       font-size: 2rem;
 
       & .sub {

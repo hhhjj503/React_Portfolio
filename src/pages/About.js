@@ -11,6 +11,8 @@ const About = () => {
     font-weight: ${(props) =>
       props.fontWeight === 'bold' ? 'bold' : 'normal'};
     word-break: keep-all;
+    width: 60%;
+    line-height: 1.618;
 
     & span {
       color: rgb(65, 191, 207);
@@ -18,9 +20,15 @@ const About = () => {
     }
 
     @media screen and (max-width: 1024px) {
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
       font-size: 1.3rem;
     }
     @media screen and (max-width: 500px) {
+      width: initial;
+      text-align: left;
+      margin: 0;
       font-size: 1.2rem;
     }
   `;
@@ -31,9 +39,11 @@ const About = () => {
     letter-spacing: 1px;
 
     @media screen and (max-width: 1024px) {
+      text-align: center;
       font-size: 1.3rem;
     }
     @media screen and (max-width: 500px) {
+      text-align: left;
       font-size: 1.2rem;
     }
   `;
@@ -41,6 +51,13 @@ const About = () => {
   const Ul = styled.ul`
     width: 100%;
     text-align: left;
+
+    @media screen and (max-width: 1024px) {
+      text-align: center;
+    }
+    @media screen and (max-width: 500px) {
+      text-align: left;
+    }
 
     & li {
       font-size: 1.3rem;

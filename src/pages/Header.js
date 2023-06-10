@@ -116,10 +116,20 @@ const Header = () => {
             <Link to="/React_Portfolio/portfolio">Portfolio</Link>
           </li>
         </Ul>
-        <Config onClick={() => changeActive()}>
+        <Config
+          onClick={() => changeActive()}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') changeActive();
+          }}
+          tabIndex={0}
+        >
           <img src={gear} alt="톱니바퀴 아이콘 이미지" />
         </Config>
-        <Palette onClick={changeColor} active={active}></Palette>
+        <Palette
+          onClick={changeColor}
+          active={active}
+          onKeyDown={changeColor}
+        ></Palette>
       </Header>
     </>
   );
@@ -142,6 +152,7 @@ const Config = styled.div`
   @media screen and (max-width: 500px) {
     width: 15px;
     right: 20px;
+    display: none;
   }
 `;
 
@@ -191,17 +202,67 @@ const Palette = (props) => {
           onClick={() => {
             props.onClick('white');
           }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') props.onKeyDown('white');
+          }}
+          tabIndex={0}
         ></Li>
-        <Li color="crimson" onClick={() => props.onClick('crimson')}></Li>
-        <Li color="orange" onClick={() => props.onClick('orange')}></Li>
-        <Li color="gold" onClick={() => props.onClick('gold')}></Li>
-        <Li color="green" onClick={() => props.onClick('green')}></Li>
-        <Li color="lightblue" onClick={() => props.onClick('lightblue')}></Li>
+        <Li
+          color="crimson"
+          onClick={() => props.onClick('crimson')}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') props.onKeyDown('crimson');
+          }}
+          tabIndex={0}
+        ></Li>
+        <Li
+          color="orange"
+          onClick={() => props.onClick('orange')}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') props.onKeyDown('orange');
+          }}
+          tabIndex={0}
+        ></Li>
+        <Li
+          color="gold"
+          onClick={() => props.onClick('gold')}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') props.onKeyDown('gold');
+          }}
+          tabIndex={0}
+        ></Li>
+        <Li
+          color="green"
+          onClick={() => props.onClick('green')}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') props.onKeyDown('green');
+          }}
+          tabIndex={0}
+        ></Li>
+        <Li
+          color="lightblue"
+          onClick={() => props.onClick('lightblue')}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') props.onKeyDown('lightblue');
+          }}
+          tabIndex={0}
+        ></Li>
         <Li
           color="midnightBlue"
           onClick={() => props.onClick('midnightBlue')}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') props.onKeyDown('midnightBlue');
+          }}
+          tabIndex={0}
         ></Li>
-        <Li color="plum" onClick={() => props.onClick('plum')}></Li>
+        <Li
+          color="plum"
+          onClick={() => props.onClick('plum')}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') props.onKeyDown('plum');
+          }}
+          tabIndex={0}
+        ></Li>
       </ul>
     </Palette>
   );
